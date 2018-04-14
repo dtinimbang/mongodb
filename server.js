@@ -14,7 +14,7 @@
 	}));
 	app.use(express.static('public')); // (create a public folder and land there)
 
-// = Database configuration ================================================
+// =================== Database configuration ================================================
 	mongoose.connect('mongodb://localhost/mongoosescraper');
 	var db = mongoose.connection;
 
@@ -25,11 +25,11 @@
 		console.log('Mongoose connection successful.');
 	});
 
-// = Require Schemas ================================================================
+// =================== Require Schemas ================================================================
 	var Note = require('./models/Note.js');
 	var Article = require('./models/Article.js');
 
-// = Routes ================================================================
+// =================== Routes ================================================================
 	app.get('/', function(req, res) {
 	  res.send(index.html); // sending the html file rather than rendering a handlebars file
 	});
