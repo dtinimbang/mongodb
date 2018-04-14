@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    <meta charset="UTF-8">
+    <title>Scraping With Mongoose</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300|Slabo+27px" rel="stylesheet">
+
+    <style>
+    .savedArticleButton {
+        margin-bottom: 20px;
+        background-color: #3b8154;
+        padding: 5px;
+        width: 150px;
+        font-family: 'Roboto', sans-serif;
+        font-style: bold;
+        letter-spacing: 1px;
+        color: white;
+        font-size: 14px;
+    }
+    #articles {
+        font-family: 'Slabo 27px', serif;
+        font-size: 19px;
+        width: 90%;
+        height: 100px;
+        margin: 100px;
+        padding:10px;
+    }
+    .nav-link {
+        margin: 10px;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 1px;
+    }
+    .btn {
+        height:50px;
+        margin-left: 20px;
+    }
+    .navbar-brand {
+    color: purple;
+    }
+</style>
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Scrape the Baltimore Sun</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">HOME<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/articles">SAVED ARTICLES</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<body>
+    <div id="wrapper">
+        <img src="./assets/images/bsun.png" class="img-fluid" alt="Responsive image" style="max-width: 100%">
+        <div id="articles"></div>
+        <div id="notes"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
