@@ -7,7 +7,7 @@
 	var request = require('request');
 	var cheerio = require('cheerio');
 
-	// var Port = process.env.port || 3000
+	var Port = process.env.port || 3000
 
 // = Middleware (pass everything through the logger first) ================================================
 	app.use(logger('dev'));
@@ -124,21 +124,12 @@ mongoose.connect(MONGODB_URI, function (error) {
 });
 
 
-// if (process.env.JAWSDB_URL){
-// 	connection = mysql.createConnection(process.env.JAWSDB_URL);
-// }else {
-// 	connection = mysql.createConnection({
-// 		host:'localhost'
-// 		user: 'root'
-// 		password: 'v312u3clz09xp69o'
-// 		database ''
-// 	})
-// }
 
-app.listen(3008, function() {
-  console.log('App running on port 3008!');
-});
-// Start the server
-// app.listen(PORT, function () {
-// 	console.log("App running on port " + PORT + "!");
-//  });
+
+// app.listen(3008, function() {
+//   console.log('App running on port 3008!');
+// });
+Start the server
+app.listen(PORT, function () {
+	console.log("App running on port " + PORT + "!");
+ });
