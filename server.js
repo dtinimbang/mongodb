@@ -7,6 +7,8 @@
 	var request = require('request');
 	var cheerio = require('cheerio');
 
+	var Port = process.env.port || 3000
+
 // = Middleware (pass everything through the logger first) ================================================
 	app.use(logger('dev'));
 	app.use(bodyParser.urlencoded({
@@ -110,10 +112,24 @@ app.post('/article/:id', function(req, res){
 
 
 
+//if deployed use database otherwise locoal mongo
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/newsdb";
 
-
-
-
-app.listen(3008, function() {
-  console.log('App running on port 3008!');
+mongoose.connect(MONGODB_URI, function (error) {
+ if (error) {
+   console.log(error);
+ } else {
+   console.log("mongoose connection success")
+ }
 });
+
+
+
+
+// app.listen(3008, function() {
+//   console.log('App running on port 3008!');
+// });
+// Start the server
+app.listen(PORT, function () {
+	console.log("App running on port " + PORT + "!");
+ });
